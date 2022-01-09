@@ -29,20 +29,19 @@
     position: absolute;
     text-align: center;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-50%);
 }
 .centerDiv{
     position: absolute;
     text-align: center;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-50%);
 }
 .textList{
     font-size: 10px;
     position: relative;
-    margin-top: -5px;
+    margin-top: -1px;
     text-align: center;
-    top:-5px;
 }
 .resultDiv{
     border-top: 1px solid;
