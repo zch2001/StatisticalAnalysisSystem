@@ -1,85 +1,184 @@
-<%--
-  Created by IntelliJ IDEA.
-  Date: 2022/1/9
-  Time: 12:11
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>统计分析系统</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Charts</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
 </head>
-<body>
-<%--<form action="session的名字" method="post" id="libraryForm"> 删除注释启用form--%>
-<div>
-    <p class="title">综合分析数据</p>
-    <input type="button" value="退出" onclick="window.location='index.jsp'" style="width: 60px;height: 25px;position: absolute;right:10px;margin-top: -90px;"/>
-    <p class="subTitle" style="text-align: left;left: 100px;">教师端</p>
+
+<body class="animsition">
+<div class="page-wrapper">
+    <!-- HEADER MOBILE-->
+    <header class="header-mobile d-block d-lg-none">
+        <div class="header-mobile__bar">
+            <div class="container-fluid">
+                <div class="header-mobile-inner">
+                    <a class="logo" href="stuPage.jsp">
+                        <img src="images/icon/logo_login.png" alt="CoolAdmin" />
+                    </a>
+                    <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar-mobile">
+            <div class="container-fluid">
+                <ul class="navbar-mobile__list list-unstyled">
+                    <li class="has-sub">
+                        <a class="js-arrow" href="search.jsp">
+                            <i class="fas fa-tachometer-alt"></i>查询</a>
+                    </li>
+                    <li>
+                        <a href="chart.jsp">
+                            <i class="fas fa-chart-bar"></i>图表</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER MOBILE-->
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a href="#">
+                <img src="images/icon/logo_login.png" alt="Cool Admin" />
+            </a>
+        </div>
+        <div class="menu-sidebar__content js-scrollbar1">
+            <nav class="navbar-sidebar">
+                <ul class="list-unstyled navbar__list">
+                    <li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fas fa-tachometer-alt"></i>查询</a>
+                    </li>
+                    <li class="active">
+                        <a href="chart.jsp">
+                            <i class="fas fa-chart-bar"></i>图表</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <div class="header-button">
+                            <div>
+                                <hr style="height: 1px;color-rendering: optimizeQuality;color: #0c5460;width: 600px;">
+                            </div>
+                            <div class="account-wrap"><!--用户头像-->
+                                <div class="account-item clearfix js-item-menu">
+                                    <div class="image">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn" href="#">john doe</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#">john doe</a>
+                                                </h5>
+                                                <span class="email">johndoe@example.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__footer" onclick="window.location='index.jsp'">
+                                            <a>
+                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <!--图表所在处-->
+            </div>
+        </div>
+        <!-- END MAIN CONTENT-->
+    </div>
+    <!-- END PAGE CONTAINER-->
+
 </div>
 
-<%String message=null;%>
-<div class="centerDivFlex" style="top:30%;height: 15px;">      <!--输入框-->
-    <p class="text">&nbsp;姓名&nbsp;&nbsp;</p>
-    <label>
-        <input name="nameSearch" style="height: 15px;width: 60px;" value=""/> <!--session获取的输入框为input的name-->
-    </label><!--局部刷新-->
-    <p class="text">&nbsp;学号&nbsp;&nbsp;</p>
-    <label>
-        <input name="idSearch" style="height: 15px;width: 60px;" value=""/>
-    </label>
-    <p class="text">&nbsp;班级&nbsp;&nbsp;</p>
-    <label>
-        <input name="classSearch" style="height: 15px;width: 60px;" value=""/>
-    </label>
-    <p class="text">&nbsp;学院&nbsp;&nbsp;</p>
-    <label>
-        <input name="collSearch" style="height: 15px;width: 60px;" value=""/>
-    </label>
-    <p class="text">&nbsp;宿舍&nbsp;&nbsp;</p>
-    <label>
-        <input name="roomSearch" style="height: 15px;width: 60px;" value=""/>
-    </label>
-</div>
-<%if (message==null){%>
-<div class="centerDiv" style="top:37%;">
-    <input type="submit" value="" onclick="window.location='teaPage.jsp'"><!--提交的按钮-->
-</div>
-<%
-        if(false){%>
-            <script type="text/javascript" language="javascript"> <!--输入框全为空的提示弹窗-->
-                alert("您还没有登录，请登录...");
-                window.document.location.href="teaPage.jsp";
-            </script>
-<%
-        }
-}
-else {%>
-<div class="centerDivFlex" style="height: 20px;top:550px;">
-    <div style="width:80px;"class="resultDiv"><p class="textList">学号</p></div>
-    <div style="width:100px;"class="resultDiv"><p class="textList">姓名</p></div>
-    <div style="width:35px;"class="resultDiv"><p class="textList">性别</p></div>
-    <div style="width:80px;"class="resultDiv"><p class="textList">班级</p></div>
-    <div style="width:80px;"class="resultDiv"><p class="textList">宿舍</p></div>
-    <div style="width:90px;"class="resultDiv"><p class="textList">手机号</p></div>
-    <div style="width:100px;"class="resultDiv"><p class="textList">风险情况</p></div>
-</div>
-<%
-    int count=90;int i;
-    for (i=1;i<=count;i++){
-        int len=550+i*20;
-%>
-<div class="centerDivFlex" style="height: 20px;top:<%=len%>px;">        <!--输出的信息 修改count的值-->
-    <div style="width:80px;"class="resultDiv"><p class="textList"><!--信息的格式为< %=结果.学号% > 以此类推--></p></div>
-    <div style="width:100px;"class="resultDiv"><p class="textList"></p></div>
-    <div style="width:35px;"class="resultDiv"><p class="textList"></p></div>
-    <div style="width:80px;"class="resultDiv"><p class="textList"></p></div>
-    <div style="width:80px;"class="resultDiv"><p class="textList"></p></div>
-    <div style="width:90px;"class="resultDiv"><p class="textList"></p></div>
-    <div style="width:100px;"class="resultDiv"><p class="textList"></p></div>
-</div>
-<%}}%>
-<%--</from>--%>
+<!-- Jquery JS-->
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="vendor/slick/slick.min.js">
+</script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="js/main.js"></script>
+
 </body>
+
 </html>
+<!-- end document-->

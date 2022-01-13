@@ -1,25 +1,106 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>login</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+    <!-- Title Page-->
+    <title>Login</title>
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
 </head>
-<div>
-    <p class="title" style="top:10%">综合分析数据</p>
-    <p class="subTitle" style="text-align:center">登录</p>
+
+<body class="animsition">
+<div class="page-wrapper">
+    <div class="page-content--bge5">
+        <div class="container">
+            <div class="login-wrap">
+                <div class="login-content">
+                    <div class="login-logo">
+                        <a href="index.jsp">
+                            <img src="images/icon/logo_login.png" alt="CoolAdmin">
+                        </a>
+                    </div>
+                    <div class="login-form">
+                        <!--<form action="" method="post" action="stuPage.jsp">-->
+                            <div class="form-group">
+                                <label>账号</label>
+                                <input class="au-input au-input--full" type="email" name="name" placeholder="账号">   <!--账号-->
+                            </div>
+                            <div class="form-group">
+                                <label>密码</label>
+       <!--密码-->               <input class="au-input au-input--full" type="password" name="password" placeholder="密码">
+                            </div>
+                            <div class="login-checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember">记住我
+                                </label>
+                            </div>
+                            <button class="au-btn au-btn--block au-btn--green m-b-20"
+                                    type="submit" onclick="run()">登录</button><!--登录按钮-->
+                            <script type="text/javascript">     <!--登录按钮-->
+                                function run(){
+                                    if (true)
+                                        window.location='stuPage.jsp';
+                                    else
+                                        window.location='teaPage.jsp';
+                                }
+                            </script>
+                        <!--</form>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<div class="centerDivFlex" style="top: 30%">
-    <p class="subTitle" style="position: absolute;left: -100px;top:-23px;">账号</p>
-    <input type="text"style="width: 164.8px;height: 20px;"/>
-</div>
-<div class="centerDivFlex" style="top: 45%">
-    <p class="subTitle" style="position: absolute;left: -100px;top:-23px;">密码</p>
-    <input type="text" style="width: 164.8px;height: 20px;"/>
-</div>
-<p class="text" style="font-size: 10px;width: 300px;position: absolute;top:1%;right:5%; translate(-50%,-50%);">学生账号直接输入学号即可</p>
-<div class="centerDivFlex" style="top: 60%">
-    <input type="submit" style="position: absolute;left: -40px;width: 80px;height: 35px;" value="" onclick="window.location='middle.jsp'">
-</div>
+
+<!-- Jquery JS-->
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="vendor/slick/slick.min.js">
+</script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="js/main.js"></script>
+
 </body>
+
 </html>
+<!-- end document-->
